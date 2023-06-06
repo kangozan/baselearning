@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kuis Learning</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<div id="container">
+        <div id="start">Kuis dimulai!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+ <!--baru-->
+ <div class="loader">
+    <div class="circle" style="--clr:#40fc43"></div>
+    <div class="circle circle2" style="--clr:#FF8C00"></div>
+    <div class="circle circle3" style="--clr:#ff00be"></div>
+    <div class="container1">
+        <div class="content">
+            <h2 style="text-align:center">Information</h2>
+            <p>Hello perkenalkan saya ahmad fauzan dari kelas PTIK 4B.
+                Quiz kali ini akan membahas seputar komponen - komponen komputer.
+            </p>
+        </div>
+        <div class="toggleBtn"></div>
+    </div>
+ </div>
+
+ <!--bawah-->
+ <footer>
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+ </footer>
+    <script src="quiz.js"></script>
+    <script>
+        let toggleBtn = document.querySelector('.toggleBtn');
+        let container1 = document.querySelector('.container1');
+        toggleBtn.onclick = function(){
+            container1.classList.toggle('active'); 
+        }
+    </script>
+</body>
+</html>
